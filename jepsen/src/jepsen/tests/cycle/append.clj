@@ -181,7 +181,7 @@
                                           :mop      mop
                                           :expected s}])
                                ; OK, or we just don't know
-                               [(assoc! state k v) error]))))
+                               [(assoc! state k (if (nil? v) [] v)) error]))))
                [(transient {}) nil])
        second))
 
